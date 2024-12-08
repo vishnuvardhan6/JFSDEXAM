@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body with a Beautiful Gradient */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+            overflow: hidden;
+        }
+
+        /* Login Card Container */
+        .login-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: bounceIn 0.7s ease-in-out;
+        }
+
+        /* Title Styling */
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 26px;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Input Fields with Enhanced Styling */
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #d1d1d1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover & Focus Effects on Input Fields */
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            border-color: #6a11cb;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #2575fc;
+            box-shadow: 0 0 8px rgba(39, 117, 252, 0.4);
+        }
+
+        /* Styled Submit Button with Smooth Hover Effect */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #2575fc;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(39, 117, 252, 0.5);
+        }
+
+        /* Responsive Design - Mobile Friendly */
+        @media (max-width: 768px) {
+            .login-card {
+                padding: 25px 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+
+        /* Add smooth animation */
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(10px);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Login Card Section -->
+    <div class="login-card">
+        <h2>Admin Login</h2>
+        <form action="adminlogin.jsp" method="post">
+            <!-- Input Fields -->
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <!-- Submit Button -->
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
